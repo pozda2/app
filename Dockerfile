@@ -8,7 +8,7 @@ COPY app.py /usr/src/app/
 COPY wsgi.py /usr/src/app/
 COPY templates/index.html /usr/src/app/templates/
 COPY gunicorn.sh /usr/src/app
-RUN chmod a+x gunicorn.sh
+RUN chmod a+x /usr/src/app/gunicorn.sh
 EXPOSE 5000
 
 ENTRYPOINT ["/usr/src/app/gunicorn.sh"]
